@@ -94,10 +94,12 @@ async function fare(){
 		console.log(origin, destination);
 		let resp = await fetch(`https://mnorthstg.prod.acquia-sites.com/wse/fares/v3/${origin.Code}/${destination.Code}/9de8f3b1-1701-4229-8ebc-346914043f4a/fares.json`);
 		try {
+			let json = await resp.json();
+			document.getElementById('fare-stuff').innerHTML = json;
+		}
+		catch {
 
 		}
-		
-		console.log(json);
 	}
 
 }
