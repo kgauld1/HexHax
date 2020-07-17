@@ -87,18 +87,49 @@ async function fare(){
 	let dest = document.getElementById('destination-dropdown');
 	let time = document.getElementById('time-dropdown');
 
-	if(orig.value != '' && dest.value != '' && time.value != ''){
-		// console.log(orig.value, dest.value, time.value);
+	if(orig.value != '' && dest.value != ''){
 		origin = stations[orig.value];
 		destination = stations[dest.value];
-		console.log(origin, destination);
 		let resp = await fetch(`https://mnorthstg.prod.acquia-sites.com/wse/fares/v3/${origin.Code}/${destination.Code}/9de8f3b1-1701-4229-8ebc-346914043f4a/fares.json`);
 		try {
 			let json = await resp.json();
-			document.getElementById('fare-stuff').innerHTML = json;
+			let results = json.GetFaresJsonResult;
+			for (let r of results){
+				if (r.Webticket == null) continue;
+				let html = `<p><b>${r.TicketType}:</b> $${r.Webticket}</p>`;
+				document.getElementById('fare-stuff').innerHTML += html;
+
+			}
 		}
 		catch {
 			document.getElementById('fare-stuff').innerHTML = "No Fare Available";
+		}
+	}
+	else {
+		if (orig.value != ''){
+			dest.innerHTML = '<option value="">Destination</option>';
+			let code = stations[orig.value].Branch_Id;
+			for (let station in stations){
+				let s = stations[station];
+				// console.log(stations[station]);
+				if (s.Branch_Id == code){
+					let html = `<option value="${s.Name}">${s.Name}</option>`;
+					dest.innerHTML += html;
+				}
+			}
+		}
+
+		if (dest.value != ''){
+			orig.innerHTML = '<option value="">Origin</option>';
+			let code = stations[dest.value].Branch_Id;
+			for (let station in stations){
+				let s = stations[station];
+				// console.log(stations[station]);
+				if (s.Branch_Id == code){
+					let html = `<option value="${s.Name}">${s.Name}</option>`;
+					orig.innerHTML += html;
+				}
+			}
 		}
 	}
 
