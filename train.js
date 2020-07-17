@@ -98,7 +98,7 @@ async function fare(){
 			document.getElementById('fare-stuff').innerHTML = json;
 		}
 		catch {
-
+			document.getElementById('fare-stuff').innerHTML = "No Fare Available";
 		}
 	}
 
