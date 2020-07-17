@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="train.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+   
+    <!--NAVBAR CODE-->
+    <nav class="nav">
+      <a href="train.html" class="nav__link nav__link--active">
+        <i class="material-icons nav__icon">train</i>
+        <span class="nav__text">Train</span>
+      </a>
+      <a href="index.html" class="nav__link">
+        <i class="material-icons nav__icon">dashboard</i>
+        <span class="nav__text">Dashboard</span>
+      </a>
+      <a href="profile.html" class="nav__link">
+        <i class="material-icons nav__icon">person</i>
+        <span class="nav__text">Profile</span>
+      </a>  
+      <!--
+      <a href="setting.html" class="nav__link">
+        <i class="material-icons nav__icon">settings</i>
+        <span class="nav__text">Settings</span>
+      </a>
+      -->
+    </nav>
+
+    <h1>Train</h1><hr>
+    <!-- 
+    <center>
+      <div class="train-title">
+        
+      </div>
+    </center>
+    -->
+  
+  <center>
+	<select id="origin-dropdown" class="dropdown dropbtn" onchange="fare()">
+		<option value="">Origin</option>
+	</select>
+	<br>
+	<select id="destination-dropdown" class="dropdown dropbtn" onchange="fare()">
+		<option value="">Destination</option>
+	</select>
+	<br>
+  <select id="time-dropdown" class="dropdown dropbtn" onchange="fare()">
+		<option value="">Time</option>
+	</select>
+  <br>
+  <p> Due to COVID-19, trains will be running at 50% capacity in order to maintain social distancing regulations. Please reserve tickets ahead of time to ensure a seat. </p> 
+  <p> Fare: </p>
+
+  <button> Purchase </button>
+
+  </center>
+    <div id="map"></div>
+
+		<div id="spacer"></div>
+
+    <script src="train.js"></script>
+  </body>
+</html>
+
+
+

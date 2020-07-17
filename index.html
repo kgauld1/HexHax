@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+    <!--NAVBAR CODE-->
+    <nav class="nav">
+      <a href="train.html" class="nav__link">
+        <i class="material-icons nav__icon">train</i>
+        <span class="nav__text">Train</span>
+      </a>
+      <a href="index.html" class="nav__link nav__link--active">
+        <i class="material-icons nav__icon">dashboard</i>
+        <span class="nav__text">Dashboard</span>
+      </a>
+      <a href="profile.html" class="nav__link">
+        <i class="material-icons nav__icon">person</i>
+        <span class="nav__text">Profile</span>
+      </a>  
+    </nav>
+
+    <h1> Dashboard</h1><hr>
+      
+      <h3> Alerts </h3>
+      <div class="dashboard-title" style = "background: rgba(255, 0, 0, 0.2)">
+        <p> Individual diagnosed with COVID-19 rode a train you were on, __ at __ on __. Please get tested if you may had contact.</p>
+      </div>
+      <div class="dashboard-title" style = "background: rgba(255, 0, 0, 0.2)">
+        <p> Train _ Line _ will be open only to essential workers
+          until further notice.
+        </p>
+      </div>
+	
+    <h3> Next Scheduled Train Rides: </h3>
+    
+    <div class='train-card' onclick="expand(this)">
+      <div class='ticket-title'>
+        <div> <i class="material-icons card__icon">local_play</i> </div>
+        <p>Botanical Garden</p>
+      </div>
+      <div class='expand'>
+        <p>Date: 10/12/2020</p>
+        <p>Departure Time: 12:30 PM</p>
+        <p>Duration: 2 hours</p>
+        <p>Origin: Brooklyn</p>
+        <p>Destination: Botanical Garden</p>
+      </div>
+    </div>
+
+    <div class='train-card' onclick="expand(this)">
+      <div class='ticket-title'>
+        <div> <i class="material-icons card__icon">local_play</i> </div>
+        <p>New Rochelle</p>
+      </div>
+      <div class='expand'>
+        <p>Date: 11/20/2020</p>
+        <p>Departure Time: 6:00 AM</p>
+        <p>Duration: 3 hours</p>
+        <p>Origin: ----</p>
+        <p>Destination: ----</p>
+      </div>
+    </div>
+
+    <div class='train-card' onclick="expand(this)">
+      <div class='ticket-title'>
+        <div> <i class="material-icons card__icon">local_play</i> </div>
+        <p>Riverdale</p>
+      </div>
+      <div class='expand'>
+        <p>Date: 12/25/2020</p>
+        <p>Departure Time: 12:00 PM</p>
+        <p>Duration: 5 hours</p>
+        <p>Origin: ----</p>
+        <p>Destination: ----</p>
+      </div>
+			
+
+      
+      
+      
+      
+    </div>
+		
+
+  </body>
+</html>
+
+
+

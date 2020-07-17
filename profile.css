@@ -1,0 +1,34 @@
+
+button {
+	border-width: 0px;
+  border-color: white;
+}
+.chosen {
+	border: 1px solid blue;
+
+}
+
+h2{
+  margin-left: 5%;
+}
+.profile-title{
+  background: rgba(27, 187, 126, 0.37);
+	padding: 1em;
+	margin-bottom: 1em;
+  border-radius: 1em;
+}
+
+.precaution-card{
+  border: 3px solid rgba(27, 187, 126, 0.37);
+  background: white;
+	border-radius: 1em;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+question-card{
+  border: 5px solid rgba(27, 187, 126, 0.37);
+	border-radius: 1em;
+	padding: 1em;
+	margin-bottom: 1em;
+}
